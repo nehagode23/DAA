@@ -65,11 +65,11 @@ int main()
     {
         printf("%d\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\n", i, power(i), cube(i), logsq(i), powpow(i), loga(i), func(i), logdiv(i), loga2(i), expo(i), pown(i));
     }
-    printf(" \n Factorial of first 20 numbers\n");
-    printf("Number\tn!\n");
+    printf("\nFactorial of first 20 numbers:\n");
+    printf("Number\tfactorial\n");
     for (int i = 0; i <= 20; i++)
     {
-        printf("%d\t%.2f", i, fact(i));
+        printf("%d\t%.2f\n", i, fact(i));
     }
     return 0;
 }
