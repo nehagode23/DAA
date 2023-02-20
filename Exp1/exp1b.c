@@ -70,11 +70,11 @@ int main() {
         clock_gettime(CLOCK_MONOTONIC, &start);
         selectionSort(arr1, s);
         clock_gettime(CLOCK_MONOTONIC, &end);
-        diff1 = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec)/1000000000.0;
+        diff1 = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec);
         clock_gettime(CLOCK_MONOTONIC, &start);
         insertionSort(arr2, s);
         clock_gettime(CLOCK_MONOTONIC, &end);
-        diff2 = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec)/1000000000.0;
+        diff2 = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec);
         printf("%d\t%f\t%f\n", s, diff1, diff2);
         s+=100;
     }
