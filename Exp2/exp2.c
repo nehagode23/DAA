@@ -8,7 +8,7 @@ void dataInput() {
     srand(time(NULL));
     for (int i=0;i<100000; i++)
     {
-        int temp = rand()%1000000000;
+        int temp = rand();
         FILE *fptr;
         fptr = fopen("dataInput.txt", "a");
         fprintf(fptr, "%d\n", temp);
@@ -123,13 +123,13 @@ int main(int argc, char const *argv[])
         long temp[s];
         mergeSort(arr1, temp, 0, s-1);
         clock_gettime(CLOCK_MONOTONIC, &end);
-        diff1 = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec) / 1000000000.0;
+        diff1 = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec);
 
         //quick sort
         clock_gettime(CLOCK_MONOTONIC, &start);
         quickSort(arr2, 0, s-1);
         clock_gettime(CLOCK_MONOTONIC, &end);
-        diff2 = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec) / 1000000000.0;
+        diff2 = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec);
         printf("%d\t%f\t%f\n", s, diff1, diff2);
         s += 100;
     }
