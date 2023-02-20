@@ -47,9 +47,8 @@ void insertionSort(long arr[], int n) {
     }
 }
 int main() {
-    //generate data
     dataInput();
-    //read data from file
+
     FILE *fptr;
     fptr = fopen("Numgenerated.txt", "r");
     long arr[100000], arr1[100000], arr2[100000];
